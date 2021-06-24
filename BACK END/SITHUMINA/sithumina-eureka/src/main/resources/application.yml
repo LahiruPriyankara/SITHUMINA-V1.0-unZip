@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: eureka-service
+
+server:
+  port: 8761
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    server:
+      waitTimeInMsWhenSyncEmpty: 0
+
+   
+zuul:
+ routes:
+   sithumina-api:
+      path: /sithumina-api/**
+      url: http://localhost:8081
+#   sithumina-report-gen:
+#      path: /api/biller_microservice/**
+#      url: http://localhost:8083
