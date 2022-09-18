@@ -1,0 +1,71 @@
+
+<nav class="navbar navbar-expand-lg navbar-danger  fixed-top" style="background-color: red;">
+  <a class="navbar-brand" routerLink="/">
+    <img class="card-img-top" src="../../../assets/logo.jpg" style="border-radius: 2px;width: 100px;">
+  </a>
+
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+
+      <li class="nav-item active" id="navCatLi">
+        <a class="nav-link" [routerLinkActiveOptions]="{exact:true}" routerLink="/" routerLinkActive="active-link">
+          <span id="navCatText">OUR CATEGORIES &nbsp;| &nbsp;BRANDS</span>
+        </a>
+      </li>
+      &nbsp;
+      <li class="nav-item" id="navLi">
+        <a class="nav-link" routerLink="populer-categories" routerLinkActive="active-link">
+          <span id="navText">POPULAR CATEGORIES</span>
+        </a>
+      </li>
+      &nbsp;
+      <li class="nav-item" id="navLi">
+        <a class="nav-link" routerLink="speial-offers" routerLinkActive="active-link">
+          <span id="navText">SPECIAL OFFERS</span>
+        </a>
+      </li>
+      &nbsp;
+      <li class="nav-item" id="navLi">
+        <a class="nav-link" routerLink="home-delivary" routerLinkActive="active-link">
+          <span id="navText">DELIVARY</span>
+        </a>
+      </li>
+      &nbsp;
+      <li class="nav-item" id="navLi">
+        <a class="nav-link" (click)="pageNotFound()" routerLink="services" routerLinkActive="active-link">
+          <span id="navText">SERVICES</span>
+        </a>
+      </li>
+
+    </ul>
+  </div>
+<!--
+  <div class="dropdown">
+    <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      <b>&nbsp;  Branches  &nbsp;</b>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li *ngFor="let branch of branches" >
+        <a class="dropdown-item" routerLink="home/3/{{branch.branch_id}}" routerLinkActive="active-link">{{branch.branch_name}}</a>
+      </li>
+    </ul>
+  </div>
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <form class="form-inline">
+    <input style="border-radius: 5px;border-color: red;" type="search" placeholder="Search" aria-label="Search">
+  </form>
+  &nbsp;&nbsp;&nbsp;&nbsp;-->
+  <a>
+    <img class="card-img-top Login-icon" (click)="openLoginReg()" src="../../../assets/login.png" style="border-radius: 2px;width: 25px;">
+  </a>
+  &nbsp;
+  |
+  &nbsp;
+  <a routerLink="logout">
+    <img class="card-img-top logout-icon" (click)="logOut()" src="../../../assets/logout.png" style="border-radius: 2px;width: 25px;">
+  </a>
+  &nbsp; &nbsp;
+
+
+</nav>

@@ -1,0 +1,64 @@
+h1 {
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  text-align: center;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+th {
+  border: 0px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  font-size: 10px;
+  padding: 4px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+tr:first-child th:first-child {
+  border-top-left-radius: 10px;
+}
+tr:first-child th:last-child {
+  border-top-right-radius: 10px;
+}
+tr:last-child td:first-child {
+  border-bottom-left-radius: 0px;
+}
+tr:last-child td:last-child {
+  border-bottom-right-radius: 0px;
+}
+
+.cart-icon:hover {
+  transform: scale(1.2, 1.2);
+  transition-duration: 100ms;
+  transition-timing-function: ease-out;
+  height: 45px;
+  opacity: 0.7;
+}
+
+.btn {
+  width: 100%;
+  background-color: rgb(10, 142, 250);
+  color: #ffffff;
+}
+#cartItemTxt {
+  font-size: 12px;
+}
+#totalTxt {
+  font-size: 15px;
+  font-weight: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #ffffff;
+}

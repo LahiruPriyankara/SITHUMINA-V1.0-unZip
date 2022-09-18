@@ -1,0 +1,24 @@
+.input-field-row {
+  margin: 20px;
+}
+
+.btn {
+  width: 100%;
+  background-color: rgba(14, 202, 23, 0.822);
+  color: #ffffff;
+}
+
+#pay-head-img {
+  border-radius: 5px;
+  width: 100%;
+  margin: 1px 1px 1px 1px;
+}
+
+#logfromTxt {
+  color: #ffffff;
+  font-style: italic;
+}
+.my-dialog-container-class {
+  padding: 0%;
+  /*background-color: red;*/
+}

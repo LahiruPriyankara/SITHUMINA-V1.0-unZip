@@ -1,0 +1,23 @@
+.arrowHead {
+  width: 2px;
+}
+h5 {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  text-align: center;
+}
+/*
+#side-bar-item-tbl-row {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+*/
+#side-bar-item-tbl-row:hover {
+  background-color: red;
+  color: #ffffff;
+  cursor: pointer;
+}
+#side-bar-cat-li:hover {
+  font-size: 17px;
+  color: #ffffff;
+}

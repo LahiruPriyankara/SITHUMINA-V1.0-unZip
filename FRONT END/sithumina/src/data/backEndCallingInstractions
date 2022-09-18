@@ -1,0 +1,66 @@
+INSERT INTO `sithumina`.`cart` (`cart_id`, `cart_status`, `cart_owner_id`) VALUES ('1', 'S', '1');
+
+////////////// FetchViewData  ////////////////////
+http://10.254.42.210:8083/getCategories
+http://10.254.42.210:8083/getBrands
+http://10.254.42.210:8083/getBranches
+http://10.254.42.210:8083/getItems
+http://10.254.42.210:8083/getItemsByCategory/1
+http://10.254.42.210:8083/getItemsByBrand/1
+http://10.254.42.210:8083/getItemsByBranch/1
+http://10.254.42.210:8083/getItem/1
+
+////////////// USER-AUTH  ////////////////////
+fetch all user - http://192.168.8.101:8082/uers
+register- http://192.168.8.101:8082/uer-register/lahiru/lahiru123/1
+login - http://192.168.8.101:8082/uer-login/lahiru/lahiru123
+
+
+////////////// USER-INQUIRY  ////////////////////
+fetch all inquiry - http://10.254.45.80:8087/all-inquiry
+create new inquiry - http://10.254.45.80:8087/add-inquiry/inqDesc/1
+
+
+////////////// USER-TRANSACION  ////////////////////
+fetch all tran - http://10.254.45.80:8085/all-trandata
+create nee tran - http://10.254.45.80:8085/add-transaction/150/1
+
+
+
+////////////// EUREKA  ////////////////////
+
+---------------- EUREKA -------------------------------------------------
+http://localhost:8761/
+
+---------------- FOR FETCH VIEW DATA TEST ---------------------------------
+http://localhost:8761/sithumina-api/sithumina-fetch-data/getCategories
+http://localhost:8761/sithumina-api/sithumina-fetch-data/getBrands
+http://localhost:8761/sithumina-api/sithumina-fetch-data/getBranches
+http://localhost:8761/sithumina-api/sithumina-fetch-data/getItems
+http://localhost:8761/sithumina-api/sithumina-fetch-data/getItemsByCategory/1
+http://localhost:8761/sithumina-api/sithumina-fetch-data/getItemsByBrand/1
+http://localhost:8761/sithumina-api/sithumina-fetch-data/getItemsByBranch/1
+http://localhost:8761/sithumina-api/sithumina-fetch-data/getItem/1
+
+---------------- FOR TRANSACTION TEST ---------------------------------
+http://localhost:8761/sithumina-api/sithumina-transaction/all-trandata
+http://localhost:8761/sithumina-api/sithumina-transaction/add-transaction/2500/2
+
+
+---------------- FOR USER AUTH TEST ---------------------------------
+http://localhost:8761/sithumina-api/sithumina-auth/uers
+http://localhost:8761/sithumina-api/sithumina-auth/uer-register/nimal/nimal123/1
+http://localhost:8761/sithumina-api/sithumina-auth/uer-login/nimal/nimal123
+
+---------------- FOR INQUIRY TEST ---------------------------------
+http://localhost:8761/sithumina-api/sithumina-inquiry/all-inquiry
+http://localhost:8761/sithumina-api/sithumina-inquiry/add-inquiry/aaaaa/1
+
+
+spring.application.name=sithumina-transaction
+server.port=8085
+
+
+
+
+

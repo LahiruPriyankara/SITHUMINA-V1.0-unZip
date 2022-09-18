@@ -1,0 +1,21 @@
+.offer-row {
+  margin-bottom: 5px;
+}
+
+.offer-desc-div {
+  background-color: #888787;
+  border-radius: 5px;
+}
+
+#offer-img {
+}
+
+#offer-img:hover {
+  width: 340px;
+  height: 140px;
+  cursor: pointer;
+}
+
+#offerDesc {
+  color: #ffffff;
+}

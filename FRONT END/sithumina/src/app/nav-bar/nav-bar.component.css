@@ -1,0 +1,52 @@
+#navCatLi {
+  width: 260px;
+  background-color: rgb(252, 252, 252);
+  text-align: center;
+  border-radius: 2px;
+}
+
+#navCatLi:hover {
+  background-color: rgb(199, 198, 198);
+}
+
+#navLi {
+  background-color: rgb(243, 4, 4);
+  text-align: center;
+  border-radius: 2px;
+}
+
+#navLi:hover {
+  background-color: rgb(228, 1, 1);
+}
+
+#navCatText {
+  text-align: center;
+  color: rgb(25, 83, 241);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#navText {
+  text-align: center;
+  margin: 2px;
+  color: rgb(255, 255, 255);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#navText:hover,
+#navCatText:hover {
+  transform: scale(1.2, 1.2);
+  transition-duration: 100ms;
+  transition-timing-function: ease-out;
+  height: 2px;
+  opacity: 0.7;
+}
+
+.Login-icon:hover,
+.logout-icon:hover {
+  transform: scale(1.2, 1.2);
+  transition-duration: 100ms;
+  transition-timing-function: ease-out;
+  height: 20px;
+  opacity: 0.7;
+  cursor: pointer;
+}

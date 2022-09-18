@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sithumina</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/da1adf1aba.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://unpkg.com/ngx-bootstrap/datepicker/bs-datepicker.css">
+
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+  <style>
+    /* The Modal (background) */
+   .popupBanner {
+     display: none; /* Hidden by default */
+     position: fixed; /* Stay in place */
+     z-index: 1; /* Sit on top */
+     padding-top: 100px; /* Location of the box */
+     left: 0;
+     top: 0;
+     width: 100%; /* Full width */
+     height: 100%; /* Full height */
+     overflow: auto; /* Enable scroll if needed */
+     background-color: rgb(0,0,0); /* Fallback color */
+     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+   }
+
+   /* Modal Content */
+   .popupBanner-content {
+     position: relative;
+     background-color: #fefefe;
+     margin: auto;
+     padding: 0;
+     border: 1px solid #888;
+     width: 40%;
+     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+     -webkit-animation-name: animatetop;
+     -webkit-animation-duration: 0.4s;
+     animation-name: animatetop;
+     animation-duration: 0.4s;
+     background-color: #00000062;
+     border-radius: 10px;
+   }
+
+   /* Add Animation */
+   @-webkit-keyframes animatetop {
+     from {top:-300px; opacity:0}
+     to {top:0; opacity:1}
+   }
+
+   @keyframes animatetop {
+     from {top:-300px; opacity:0}
+     to {top:0; opacity:1}
+   }
+
+   /* The Close Button */
+   .close {
+     color: white;
+     float: right;
+     font-size: 28px;
+     font-weight: bold;
+   }
+
+   .close:hover,
+   .close:focus {
+     color: #000;
+     text-decoration: none;
+     cursor: pointer;
+   }
+
+   .popupBanner-header {
+     padding: 2px 16px;
+     background-color: #ca0000;
+     color: white;
+     border-radius: 10px;
+   }
+
+   @media only screen and (max-width: 767px) {
+     .popupBanner-content {
+       width: 90%;
+     }
+   }
+
+   .popupBanner-body {padding: 2px 16px;}
+   /*
+   .modal-footer {
+     padding: 2px 16px;
+     background-color: #5cb85c;
+     color: white;
+   }*/
+   .popupBanner-footerDiv{
+    background-color: #ca0000;
+    height: 40px;
+    margin-bottom: 10px;}
+
+    .popupBanner-footerDiv-txt{
+      font-family: cursive;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      font-size: 30px;
+      color: #ffffff;
+      text-align: center;
+      color: white;
+      text-shadow: 2px 2px 4px #000000;
+    }
+
+    #popupBannerImg{
+      width:100%;
+      object-fit: contain;
+    }
+
+ </style>
+
+
+</head>
+<body class="mat-typography">
+<!--
+<section class="items">
+  <img src="../../../assets/pageNotFound.jpg" alt="image" />
+  <button class="my-btn" type="button"> Add to cart</button>
+</section>
+-->
+<!--
+<div class="spinner-border text-primary" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+-->
+
+
+  <app-root></app-root>
+
+
+  <div>
+    <button id="popupBannerOpenBtn" style="display: none">Open Modal</button>
+
+    <div id="popupBanner" class="popupBanner">
+      <div class="popupBanner-content">
+        <div class="popupBanner-header">
+          <span class="close" onclick="closeModel()">&times;</span>
+          <img src="./assets/logo.jpg" style="width: 90px">
+        </div>
+        <div class="popupBanner-body">
+          <img id="popupBannerImg" src="./assets/promotion/promo3.gif">
+
+          <div class="popupBanner-footerDiv">
+            <h1 class="popupBanner-footerDiv-txt">
+              <b>Summer Sale - till 20th, Nov</b>
+            </h1>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
+<!--
+<script>
+	$(".my-btn").on('click', function () {
+		console.log("Hit");
+		var flyingImg = $(this).parent().find("img").eq(0);
+
+		if (flyingImg) {
+			var flyingImgClone = flyingImg.clone()
+				.offset({
+				top: flyingImg.offset().top,
+				left: flyingImg.offset().left
+			})
+				.css({
+					'opacity': '0.5',
+					'position': 'absolute',
+					'height': flyingImg.height() /2,
+					'width': flyingImg.width() /2,
+					'z-index': '100'
+			})
+				.appendTo($('body'))
+				.animate({
+					'top': $('.cart').offset().top + 10,
+					'left': $('.cart').offset().left + 15,
+					'height': flyingImg.height() /2,
+					'width': flyingImg.width() /2
+			}, 1000, 'easeInOutExpo');
+
+			if (true) {
+				setTimeout(function () {
+					$('.cart').effect("shake", {
+						times: 2
+					}, 200);
+				}, 1500);
+			}
+
+
+			flyingImgClone.animate({
+					'width': 0,
+					'height': 0
+				}, function () {
+					$(this).detach()
+			});
+		}
+});
+</script>
+
+-->
+
+<script>
+  $("#popupBannerOpenBtn").click();
+  // Get the modal
+      var modal = document.getElementById("popupBanner");
+
+  // Get the button that opens the modal
+      var btn = document.getElementById("popupBannerOpenBtn");
+
+  // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks the button, open the modal
+      btn.onclick = function() {
+          modal.style.display = "block";
+      }
+
+  // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+      function closeModel(){
+          document.getElementById("popupBanner").style.display = "none";
+      }
+  // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
+
+      $('#popupBannerImg')
+              .load(function() {
+                  //alert('Image is not loaded!');
+                 // console.log("Promotion Image is loaded!");
+                $("#popupBannerOpenBtn").click();
+              })
+              .error(function() {
+                  //console.log("Promotion Image is not loaded!");
+                  //alert('Image is not loaded!');
+              });
+
+</script>

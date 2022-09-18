@@ -1,0 +1,61 @@
+<div class="container card" style="width: 600px;background-image: url('../../../assets/logpage.PNG')">
+<hr>
+  <div class="row" style="background-color: cornflowerblue;margin-bottom: 10px;">
+    <span style="text-align: center;font-size: 30px;">
+      &nbsp;
+      <i class="fa fa-cc-amex" aria-hidden="true"></i>
+      &nbsp;
+      <i class="fa fa-cc-discover" aria-hidden="true"></i>
+      &nbsp;
+      <i class="fa fa-cc-mastercard" aria-hidden="true"></i>
+      &nbsp;
+      <i class="fa fa-cc-paypal" aria-hidden="true"></i>
+      &nbsp;
+      <i class="fa fa-cc-visa" aria-hidden="true"></i>
+    </span>
+  </div>
+
+  <div class="row input-field-row">
+    <div class="form-group">
+      <label for="usr" style="color: black;"><b>Nuber of Items</b></label>
+      <input type="text" class="form-control" id="usr" placeholder="0">
+    </div>
+  </div>
+
+  <div class="row input-field-row">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="usr" style="color: black;"><b>Card Number</b></label>
+        <input type="text" class="form-control" id="usr" placeholder=".... .... .... ....">
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="usr" style="color: black;"><b>Name On Card</b></label>
+        <input type="text" class="form-control" id="usr" placeholder="eg. first last">
+      </div>
+    </div>
+  </div>
+
+  <div class="row input-field-row">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="usr" style="color: black;"><b>Expiry</b></label>
+        <input type="text" class="form-control" id="usr" placeholder="MM/DD">
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for="usr" style="color: black;"><b>CVC</b></label>
+        <input type="text" class="form-control" id="usr" placeholder="...">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <button type="button" class="btn" routerLink="/do-transaction" (click)="doPayment()">PAY</button>
+  </div>
+<hr>
+</div>

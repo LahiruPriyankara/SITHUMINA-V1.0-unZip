@@ -1,0 +1,10 @@
+#popular-img:hover {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+#popular-img {
+  border-radius: 5px;
+  border-color: black;
+}

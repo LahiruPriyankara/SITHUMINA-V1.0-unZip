@@ -1,0 +1,85 @@
+
+<div class="row">
+
+  <div class="col-sm-1">
+    <app-side-bar-icon></app-side-bar-icon>
+  </div>
+
+  <div class="col-sm-2 card">
+    <app-side-bar></app-side-bar>
+  </div>
+
+  <div class="col-sm-6">
+
+<section class="items">
+  <img src="../../../assets/pageNotFound.jpg" alt="image" />
+  <button class="add-to-cart-btn" type="button"> Add to cart</button>
+</section>
+
+<img class="card-img-top" src="../../../assets/pageNotFound.jpg" style="border-radius: 2px;width: 80%;margin: 100px 10px 200px 10px;">
+
+
+<script>
+  console.log("WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW");
+	$(".add-to-cart-btn").on('click', function () {
+		console.log("Hit");
+		var flyingImg = $(this).parent().find("img").eq(0);
+
+		if (flyingImg) {
+			var flyingImgClone = flyingImg.clone()
+				.offset({
+				top: flyingImg.offset().top,
+				left: flyingImg.offset().left
+			})
+				.css({
+					'opacity': '0.5',
+					'position': 'absolute',
+					'height': flyingImg.height() /2,
+					'width': flyingImg.width() /2,
+					'z-index': '100'
+			})
+				.appendTo($('body'))
+				.animate({
+					'top': $('.cart').offset().top + 10,
+					'left': $('.cart').offset().left + 15,
+					'height': flyingImg.height() /2,
+					'width': flyingImg.width() /2
+			}, 1000, 'easeInOutExpo');
+
+			if (true) {
+				setTimeout(function () {
+					$('.cart').effect("shake", {
+						times: 2
+					}, 200);
+				}, 1500);
+			}
+
+
+			flyingImgClone.animate({
+					'width': 0,
+					'height': 0
+				}, function () {
+					$(this).detach()
+			});
+		}
+});
+
+</script>
+
+  </div>
+
+  <div class="col-sm-3 card" style="box-shadow: 1px 1px 1px black, 0 0 10px rgb(238, 16, 16), 0 0 5px rgb(248, 4, 4);">
+    <app-cart-data></app-cart-data>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+

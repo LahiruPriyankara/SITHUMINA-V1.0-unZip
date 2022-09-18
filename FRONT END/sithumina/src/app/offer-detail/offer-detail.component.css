@@ -1,0 +1,16 @@
+.input-field-row {
+  margin: 20px;
+}
+.btn {
+  margin-left: 40px;
+  margin-right: 40px;
+  width: 90%;
+  background-color: rgba(14, 202, 23, 0.822);
+  color: #ffffff;
+}
+
+#pay-head-img {
+  border-radius: 5px;
+  width: 100%;
+  margin: 1px 1px 1px 1px;
+}

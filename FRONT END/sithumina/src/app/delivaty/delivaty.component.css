@@ -1,0 +1,13 @@
+#devivary-img {
+  cursor: pointer;
+  border-radius: 15px;
+  border: 2px solid transparent;
+  border-color: black;
+  width: 400px;
+  height: 400px;
+}
+
+#devivary-img:hover {
+  width: 410px;
+  height: 410px;
+}

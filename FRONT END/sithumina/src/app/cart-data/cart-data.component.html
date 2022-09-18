@@ -1,0 +1,47 @@
+
+<div class="row" style="background-color: red;height: 50px;">
+  <h1>cart details
+    &nbsp; <img class="cart cart-icon" src="../../../assets/cart-lrg.png" alt="Cart"/>
+  </h1>
+</div>
+  <br>
+
+<table style="width: 100%;">
+
+  <tr style="background-color: red;color: #ffffff;">
+    <th>PRODUCT</th>
+    <th>UNIT PRICE</th>
+    <th>QTY</th>
+    <th>PRICE</th>
+    <th></th>
+  </tr>
+
+  <tr *ngFor="let item of allCartItems">
+    <td><span id="cartItemTxt"><b>{{item.item_name}}</b></span></td>
+    <td style="text-align: center;"><span id="cartItemTxt"><b>{{item.unit_price}}</b></span></td>
+    <td style="text-align: center;"><span id="cartItemTxt"><b>1</b></span></td>
+    <td style="text-align: center;"><span id="cartItemTxt"><b>{{item.unit_price}}</b></span></td>
+    <td>
+      <i class="fas fa-edit" style="color: green;cursor: pointer;"></i>
+      &nbsp;
+      <i class="fas fa-trash-alt" style="color: red;cursor: pointer" (click)="removeItemFromCart(item)"></i></td>
+  </tr>
+
+  <tr style="background-color: black;">
+    <td colspan="3" style="text-align: center;"><span id="totalTxt"><b><i>TOTAL BILL</i></b></span></td>
+    <td colspan="2"><span id="totalTxt"><b><i>&nbsp;&nbsp;&nbsp;&nbsp;$ {{totalBill}}.00 /=</i></b></span></td>
+  </tr>
+
+</table>
+
+
+<button type="button" class="btn" routerLink="/pay-card">
+  PRECEED TO PAY
+</button>
+<hr>
+<img class="card-img-top" src="../../../assets/cards.png">
+
+<hr>
+
+<img class="card-img-top" src="../../../assets/promotion/promo2.gif" style="border-radius: 2px;border: 10px;width: 100%;">
+

@@ -1,0 +1,105 @@
+
+<!--background-image: url('../../../assets/loginbackground.png');-->
+<div class="container card main-div my-dialog-container-class" style="width: 500px">
+  <mat-tab-group style="background-image: url('../../../assets/logpage.PNG')">
+    <mat-tab label="LOG IN">
+
+      <div class="row input-field-row">
+        <div class="col-sm-2"></div>
+
+        <div class="col-sm-8">
+          <div class="form-group">
+            <label for="usr" id="logfromTxt">USER NAME</label>
+            <input type="text" class="form-control" id="usr" placeholder="user name">
+          </div>
+        </div>
+
+        <div class="col-sm-2"></div>
+      </div>
+
+      <div class="row input-field-row">
+        <div class="col-sm-2"></div>
+
+        <div class="col-sm-8">
+          <div class="form-group">
+            <label for="usr" id="logfromTxt">PASSWORD</label>
+            <input type="password" class="form-control" id="usr" placeholder="password">
+          </div>
+        </div>
+
+        <div class="col-sm-2"></div>
+      </div>
+
+      <div class="row input-field-row">
+        <div class="col-sm-2"></div>
+
+        <div class="col-sm-8" style="float: left;">
+          <button class="btn btn-primary" routerLink="/home" (click)="login()">LOG IN</button>
+        </div>
+
+        <div class="col-sm-2"></div>
+      </div>
+
+      <div class="row">
+        <img class="card-img-top" src="../../../assets/loginwith.png" style="width: 100%;" id="pay-head-img">
+      </div>
+
+</mat-tab>
+  <mat-tab label="REGISTER">
+
+    <div class="row input-field-row">
+      <div class="col-sm-2"></div>
+
+      <div class="col-sm-8">
+        <div class="form-group">
+          <label for="usr" id="logfromTxt">USER NAME</label>
+          <input type="text" class="form-control" id="usr" placeholder="user name">
+        </div>
+      </div>
+
+      <div class="col-sm-2"></div>
+    </div>
+
+    <div class="row input-field-row">
+      <div class="col-sm-2"></div>
+
+      <div class="col-sm-8">
+        <div class="form-group">
+          <label for="usr" id="logfromTxt">PASSWORD</label>
+          <input type="password" class="form-control" id="usr" placeholder="password">
+        </div>
+      </div>
+
+      <div class="col-sm-2"></div>
+    </div>
+
+    <div class="row input-field-row">
+      <div class="col-sm-2"></div>
+
+      <div class="col-sm-8">
+        <div class="form-group">
+          <label for="usr" id="logfromTxt">CONFIRM PASSWORD</label>
+          <input type="password" class="form-control" id="usr" placeholder="confirm password">
+        </div>
+      </div>
+
+      <div class="col-sm-2"></div>
+    </div>
+
+    <div class="row input-field-row">
+      <div class="col-sm-2"></div>
+
+      <div class="col-sm-8">
+        <button class="btn btn-primary" routerLink="/home" (click)="register()">REGISTER</button>
+      </div>
+
+      <div class="col-sm-2"></div>
+    </div>
+
+    <div>
+      <img src="../../../assets/loginwith.png" style="width: 100%;">
+    </div>
+  </mat-tab>
+</mat-tab-group>
+
+</div>

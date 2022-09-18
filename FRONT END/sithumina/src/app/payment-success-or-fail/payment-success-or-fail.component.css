@@ -1,0 +1,22 @@
+.transaction-success-or-fail-div {
+  margin-bottom: 200px;
+}
+
+.transaction-success-or-fail-div-btn-row {
+  margin: 10px;
+}
+.btn-view-item {
+  margin-left: 40px;
+  margin-right: 40px;
+  width: 90%;
+  background-color: rgba(14, 202, 23, 0.822);
+  color: #ffffff;
+}
+
+.btn-pdf {
+  margin-left: 40px;
+  margin-right: 40px;
+  width: 90%;
+  background-color: rgba(245, 0, 0, 0.822);
+  color: #ffffff;
+}

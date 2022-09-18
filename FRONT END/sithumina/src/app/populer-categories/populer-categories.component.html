@@ -1,0 +1,124 @@
+
+<div class="row">
+
+  <div class="col-sm-1">
+    <app-side-bar-icon></app-side-bar-icon>
+  </div>
+
+  <div class="col-sm-2 card">
+    <app-side-bar (allItemsEmit)="getAllItems()" (itemByCatEmit)="getItemByCatId($event)" (itemByBrandEmit)="getItemByBrandId($event)" (itemByBranchEmit)="getItemByBranchId($event)" (itemBySearchKeyEmit)="itemBySearchKey($event)"></app-side-bar>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="container">
+      <hr>
+      <div class="row">
+        <div class="col-sm-2">
+          <img class="card-img-top" routerLink="/" src="../../../assets/populer-category/rice.jpg" id="popular-img">
+        </div>
+        <div class="col-sm-2">
+          <img class="card-img-top" routerLink="/" src="../../../assets/populer-category/vegitable.jpg" id="popular-img">
+        </div>
+        <div class="col-sm-2">
+          <img class="card-img-top" routerLink="/" src="../../../assets/populer-category/toys.jpg" id="popular-img">
+        </div>
+        <div class="col-sm-2">
+          <img class="card-img-top" routerLink="/" src="../../../assets/populer-category/stationary.jpg" id="popular-img">
+        </div>
+        <div class="col-sm-2">
+          <img class="card-img-top" routerLink="/" src="../../../assets/populer-category/gift.jpg" id="popular-img">
+        </div>
+        <div class="col-sm-2">
+          <img class="card-img-top" routerLink="/" src="../../../assets/populer-category/cake.jpg" id="popular-img">
+        </div>
+       </div>
+
+       <div class="row">
+        <div class="col-sm-2">
+          <img class="card-img-top" routerLink="/" src="../../../assets/populer-category/stationary.jpg" id="popular-img">
+        </div>
+        <div class="col-sm-2">
+          <img class="card-img-top" routerLink="/" src="../../../assets/populer-category/gift.jpg" id="popular-img">
+        </div>
+        <div class="col-sm-2">
+          <img class="card-img-top" routerLink="/" src="../../../assets/populer-category/cake.jpg" id="popular-img">
+        </div>
+        <div class="col-sm-2">
+          <img class="card-img-top" routerLink="/" src="../../../assets/populer-category/kitchenItem.jpg" id="popular-img">
+        </div>
+        <div class="col-sm-2">
+          <img class="card-img-top" routerLink="/" src="../../../assets/populer-category/perfums.png" id="popular-img">
+        </div>
+        <div class="col-sm-2">
+          <img class="card-img-top" routerLink="/" src="../../../assets/populer-category/fruit.jpg" id="popular-img">
+        </div>
+       </div>
+
+       <div class="row">
+        <div class="col-sm-2">
+          <img class="card-img-top" routerLink="/" src="../../../assets/populer-category/kitchenItem.jpg" id="popular-img">
+        </div>
+        <div class="col-sm-2">
+          <img class="card-img-top" routerLink="/" src="../../../assets/populer-category/perfums.png" id="popular-img">
+        </div>
+        <div class="col-sm-2">
+          <img class="card-img-top" routerLink="/" src="../../../assets/populer-category/fruit.jpg" id="popular-img">
+        </div>
+        <div class="col-sm-2">
+          <img class="card-img-top" routerLink="/" src="../../../assets/populer-category/rice.jpg" id="popular-img">
+        </div>
+        <div class="col-sm-2">
+          <img class="card-img-top" routerLink="/" src="../../../assets/populer-category/vegitable.jpg" id="popular-img">
+        </div>
+        <div class="col-sm-2">
+          <img class="card-img-top" routerLink="/" src="../../../assets/populer-category/toys.jpg" id="popular-img">
+        </div>
+       </div>
+
+       <div class="row">
+        <div class="col-sm-2">
+          <img class="card-img-top" routerLink="/" src="../../../assets/populer-category/rice.jpg" id="popular-img">
+        </div>
+        <div class="col-sm-2">
+          <img class="card-img-top" routerLink="/" src="../../../assets/populer-category/cake.jpg" id="popular-img">
+        </div>
+        <div class="col-sm-2">
+          <img class="card-img-top" routerLink="/" src="../../../assets/populer-category/toys.jpg" id="popular-img">
+        </div>
+        <div class="col-sm-2">
+          <img class="card-img-top" routerLink="/" src="../../../assets/populer-category/stationary.jpg" id="popular-img">
+        </div>
+        <div class="col-sm-2">
+          <img class="card-img-top" routerLink="/" src="../../../assets/populer-category/fruit.jpg" id="popular-img">
+        </div>
+        <div class="col-sm-2">
+          <img class="card-img-top" routerLink="/" src="../../../assets/populer-category/perfums.png" id="popular-img">
+        </div>
+      </div>
+
+
+
+
+       <div class="row" style="margin-top: 10px;margin-bottom: 50px;background-color: #000000;">
+        <span style="color: #ffffff;">A category description is a paragraph or two of content on the page representing an entire category of items for sale. If you have a women's online clothing store, for example, you might have a unique category description on the pages for tops, bottoms, dresses, sportswear, and accessories.</span>
+       </div>
+      <hr>
+
+      <div class="row">
+        <div *ngFor="let item of viewItems" class="col-sm-3">
+           <div class="shadow-lg mb-1">
+                <app-item [item]="item" (itemAddToCart)="itemAddToCart($event)"></app-item>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-3 card" style="box-shadow: 1px 1px 1px black, 0 0 10px rgb(238, 16, 16), 0 0 5px rgb(248, 4, 4);">
+    <app-cart-data [allCartItems] = "cartItems" [totalBill]="totalBill"></app-cart-data>
+  </div>
+</div>
+
+
+
+

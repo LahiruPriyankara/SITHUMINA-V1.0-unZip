@@ -1,0 +1,73 @@
+<div class="row">
+
+  <div class="col-sm-1">
+    <app-side-bar-icon></app-side-bar-icon>
+  </div>
+
+  <div class="col-sm-2 card">
+    <app-side-bar></app-side-bar>
+  </div>
+
+  <div class="col-sm-6">
+
+    <div class="row">
+      <div class="col-sm-5">
+        <img *ngIf="item.item_image" class="card-img-top" src="../../../assets/items/{{item.item_image}}.jpg">
+        <img *ngIf="!item.item_image" class="card-img-top" src="../../../assets/item.jpg">
+      </div>
+      <div class="col-sm-7 card">
+        <h4>ITEM NAME</h4>
+        <p id="itemData">{{item.item_name}}</p>
+        <h4>ITEM PRICE</h4>
+        <p id="itemData">{{item.unit_price}}</p>
+        <h4>EXP DATE:</h4>
+        <p id="itemData">01/02/2022</p>
+
+         <div class="row">
+          <div class="col-sm-6">
+            <button type="button" class="btn" style="width: 100%;background-color: rgb(238, 188, 26);color: #ffffff;" routerLink="/home">GO BACK</button>
+          </div>
+          <div class="col-sm-6">
+            <button type="button" (click)="addToCart(item)" class="btn" style="width: 100%;background-color: rgb(22, 218, 4);color: #ffffff;">ADD TO CART</button>
+          </div>
+        </div>
+
+
+        <hr>
+        <span style="text-align: center;font-size: 30px;">
+          &nbsp;
+          <i class="fa fa-cc-amex" aria-hidden="true"></i>
+          &nbsp;
+          <i class="fa fa-cc-discover" aria-hidden="true"></i>
+          &nbsp;
+          <i class="fa fa-cc-mastercard" aria-hidden="true"></i>
+          &nbsp;
+          <i class="fa fa-cc-paypal" aria-hidden="true"></i>
+          &nbsp;
+          <i class="fa fa-cc-visa" aria-hidden="true"></i>
+      </span>
+      </div>
+    </div>
+    <br>
+    <div class="row card">
+      <h2>ABOUTH THE PRODUCT</h2>
+      <span>
+        Our very own range of SL-GAP (SL- Good Agricultural Practices) Certified Vegetables and Fruits. Good for vision, immune function, reproduction and cell communication. Promotes tissue repair and thyroid health. Contains - Vitamin: A, K, C, B6 Minerals: Manganese, Copper, Iron. Disclaimer: Please note that the image is used for presentation purposes only. Actual product may slightly defer. Our team at Cargills Online takes every step to ensure to maintain the accuracy of all information displayed. *Images for illustration purposes only. Product received may vary.
+      </span>
+
+      <div class="row" style="margin-bottom: 120px;">
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col-sm-3 card" style="box-shadow: 1px 1px 1px black, 0 0 10px rgb(238, 16, 16), 0 0 5px rgb(248, 4, 4);">
+    <app-cart-data [allCartItems] = "cartItems" [totalBill]="totalBill"></app-cart-data>
+  </div>
+</div>
+
+
+
+
+
+

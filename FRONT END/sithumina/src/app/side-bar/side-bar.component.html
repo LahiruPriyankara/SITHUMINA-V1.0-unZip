@@ -1,0 +1,65 @@
+<button (click)="toggleShow()" type="checkbox" style="width: 100%;color: #ffffff;background-color: #000000;">
+  <i class="fas fa-bars"></i>
+</button>
+
+<div *ngIf="isShown" id="divshow" >
+
+  <div class="row">
+    <!--<div class="dropdown">
+      <button style="width: 100%;" class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        <b>&nbsp;  Branches  &nbsp;</b>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li *ngFor="let branch of branches" >
+          <a class="dropdown-item" routerLink="home/3/{{branch.branch_id}}" routerLinkActive="active-link">{{branch.branch_name}}</a>
+        </li>
+      </ul>
+    </div>-->
+
+  <select (change)="clickOnBranch($event.target.value)" class="form-select btn-primary" aria-label="Default select example" style="margin: 8px;width: 92%;color: #ffffff;" >
+    <option selected style="background-color: rgba(216, 216, 247, 0.705);" id="0">0 Select A Branch</option>
+    <option *ngFor="let branch of branches" style="background-color: rgba(216, 216, 247, 0.705);" id="{{branch.branch_id}}">{{branch.branch_id}} {{branch.branch_name}}</option>
+  </select>
+
+  </div>
+
+  <div class="row">
+    <form style="margin-top: 6px;">
+      <div class="mb-3">
+        <input (keyup)="searchItem($event)" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Search..">
+      </div>
+    </form>
+  </div>
+</div>
+<div class="row"  (click)="allItems()"><!--(click)="allItems()"-->
+  <button class="btn btn-primary" style="margin: 8px;width: 92%;" routerLink="/" >ALL ITEMS</button>
+</div>
+<hr>
+<div class="row" style="background-color: red;margin-bottom: 10px;">
+  <h5 style="padding-top: 10px;"><b>ALL CATEGORIES</b></h5>
+</div>
+
+
+<table style="width: 100%;">
+  <tr id="side-bar-item-tbl-row" *ngFor="let category of categories"  (click)="clickOnCategory(category)">
+    <td>
+      <img class="arrowHead"  style="width: 10px;" src="../../../assets/arrowhead.png">
+      <span style="color: black;" id="side-bar-cat-li"> {{category.category_name}} </span>
+    </td>
+  </tr>
+</table>
+
+<div class="row" style="background-color: red;margin-bottom: 10px;margin-top: 15px;">
+  <h5 style="padding-top: 10px;"><b>ALL BRANDS</b></h5>
+</div>
+
+
+<table style="width: 100%;">
+  <tr id="side-bar-item-tbl-row" *ngFor="let brand of brands" (click)="clickOnBrand(brand)">
+    <td>
+      <img class="arrowHead"  style="width: 10px;" src="../../../assets/arrowhead.png">
+      <span style="color: black;" id="side-bar-cat-li">{{brand.brand_name}} </span>
+    </td>
+  </tr>
+</table>
+<br>

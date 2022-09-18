@@ -1,0 +1,30 @@
+<div class="row">
+
+  <div class="col-sm-1">
+    <app-side-bar-icon></app-side-bar-icon>
+  </div>
+
+  <div class="col-sm-2 card">
+    <app-side-bar (allItemsEmit)="getAllItems()" (itemByCatEmit)="getItemByCatId($event)" (itemByBrandEmit)="getItemByBrandId($event)" (itemByBranchEmit)="getItemByBranchId($event)" (itemBySearchKeyEmit)="itemBySearchKey($event)"></app-side-bar>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="container">
+      <div class="row">
+        <div *ngFor="let item of viewItems" class="col-sm-3">
+           <div class="shadow-lg mb-1">
+                <app-item [item]="item" (itemAddToCart)="itemAddToCart($event)"></app-item>
+         </div>
+        </div>
+       </div>
+    </div>
+  </div>
+
+  <div class="col-sm-3 card" style="box-shadow: 1px 1px 1px black, 0 0 10px rgb(238, 16, 16), 0 0 5px rgb(248, 4, 4);">
+    <app-cart-data [allCartItems] = "cartItems" [totalBill]="totalBill"></app-cart-data>
+  </div>
+</div>
+
+
+
+

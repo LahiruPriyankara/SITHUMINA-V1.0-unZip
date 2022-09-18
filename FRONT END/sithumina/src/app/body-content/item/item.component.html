@@ -1,0 +1,54 @@
+
+<div class="card">
+  <div class="card-img-wrapper">
+
+    <!--<img *ngIf="item.item_image" class="card-img-top" src="../../../assets/{{item.image}}.jpg">-->
+    <img *ngIf="item.item_image" class="card-img-top" src="../../../assets/items/{{item.item_image}}.jpg">
+    <img *ngIf="!item.item_image" class="card-img-top" src="../../../assets/item.jpg">
+    <!-- <ul *ngIf="!item.image" class="list-inline text-center member-icons animate"> -->
+    <ul class="list-inline text-center member-icons animate">
+      <li class="list-inline-item">
+        <button class="btn btn-primary" routerLink="/item-detail/{{item.item_id}}">
+          <i class="fa">&#xf05a;</i>
+        </button>
+      </li>
+      <li class="list-inline-item">
+        <button class="btn btn-success" (click)="addToCart(item)">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        </button>
+      </li>
+    </ul>
+
+  </div>
+  <div class="card-body p-1">
+    <h4 class="mb-0" style="text-align: center;"> {{item.item_name}} </h4>
+    <hr class="mt-0 mb-2">
+    <h4 class="mb-0" style="background-color: rgb(238, 238, 238);">
+      PRICE: <span class="font-highlight" style="font-size: 12px;">{{item.unit_price}} $.</span> |
+      QTY:  <span class="font-highlight" style="font-size: 12px;">{{item.unit_price}} </span>
+    </h4>
+  </div>
+</div>
+
+<script>
+
+$('.add-to-cart').click(function() {
+   var cart = $('.shopping_bg');
+   var imgtofly = $(this).parents('li.cart_items').find('a.product-image img').eq(0);
+    if (imgtofly) {
+        var imgclone = imgtofly.clone()
+            .offset({ top:imgtofly.offset().top, left:imgtofly.offset().left })
+            .css({'opacity':'0.7', 'position':'absolute', 'height':'150px', 'width':'150px', 'z-index':'1000'})
+            .appendTo($('body'))
+            .animate({
+                'top':cart.offset().top + 10,
+                'left':cart.offset().left + 30,
+                'width':55,
+                'height':55
+            }, 1000, 'easeInElastic');
+        imgclone.animate({'width':0, 'height':0}, function(){ $(this).detach() });
+    }
+    return false;
+});
+
+</script>

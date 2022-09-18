@@ -1,0 +1,15 @@
+h2 {
+  text-shadow: 2px 2px 8px #ff0000;
+}
+h4 {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+}
+#itemData {
+  margin-left: 50px;
+}
+.card-img-top:hover {
+  width: 320px;
+  height: 320px;
+  cursor: zoom-in;
+}
